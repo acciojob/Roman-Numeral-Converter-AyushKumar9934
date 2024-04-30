@@ -10,11 +10,21 @@ function convertToRoman(num) {
     };
 
   //your code here
-
+	let ans="";
+	while(num){
+		for(let i=0;i<7;i++){
+			if(num>=obj[i][1]){
+				ans+=obj[i][0];
+				num-=obj[i][1];
+				break;
+			}
+		}
+	}
+return ans;
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
+ console.log(convertToRoman(36));
 
 
 
